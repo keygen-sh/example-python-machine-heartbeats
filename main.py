@@ -33,10 +33,11 @@ def validate_license_key_with_fingerprint(license_key, machine_fingerprint):
     })
   ).json()
 
-  license_data = validation['data']
   license_id = None
-  if license_data != None:
-    license_id = license_data['id']
+  if 'data' in validation:
+    data = validation['data']
+    if data != None:
+      license_id = data['id']
 
   if 'errors' in validation:
     errs = validation['errors']
