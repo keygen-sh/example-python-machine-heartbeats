@@ -12,7 +12,7 @@ def to_error_message(errs):
   Formats an array of error dicts into an error message string. Returns an error message.
   """
 
-  return ''.join(map(lambda e: f"{e['title']}: {e['detail']}", errs))
+  return ', '.join(map(lambda e: f"{e['title']}: {e['detail']}", errs))
 
 def validate_license_key_with_fingerprint(license_key, machine_fingerprint):
   """
