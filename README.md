@@ -1,7 +1,7 @@
 # Example Machine Activation Heartbeats
 
-This is an example of a typical node-locked machine activation flow written
-in Python, utilizing a machine hearbeat monitor to automatically deactivate
+This is an example of a typical node-locked or floating machine activation flow
+written in Python, utilizing a machine hearbeat monitor to automatically deactivate
 the machine in the event that the normal deactivation procedure fails.
 
 ## Running the example
