@@ -179,7 +179,10 @@ if validation_code == 'NOT_FOUND':
   sys.exit(1)
 
 # Attempt to activate the machine if it's not already activated
-if validation_code == 'NO_MACHINE':
+activation_is_required = validation_code == 'NO_MACHINE' or \
+                         validation_code == 'NO_MACHINES' or \
+                         validation_code == 'FINGERPRINT_SCOPE_MISMATCH'
+if activation_is_required:
   machine_id = activate_machine_for_license(license_id, machine_fingerprint)
   if machine_id == None:
     sys.exit(1)
