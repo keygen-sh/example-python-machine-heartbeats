@@ -47,7 +47,7 @@ def validate_license_key_with_fingerprint(license_key, machine_fingerprint):
 
     return None, license_id
 
-  validation_code = validation['meta']['constant']
+  validation_code = validation['meta']['code']
 
   print(f'[keygen.validate_license_key_with_fingerprint] validation_code={validation_code} license_id={license_id} machine_fingerprint={machine_fingerprint}')
 
