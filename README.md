@@ -33,9 +33,9 @@ To perform a machine activation, run the program with a license key:
 python3 main.py some-license-key-here
 ```
 
-The script will use a SHA256 hash of your device's MAC address for the
-machine's fingerprint during activation. Upon activation, a heartbeat
-monitor will be started for the activated machine.
+The script will use a SHA256-HMAC of your device's [machineid](https://github.com/keygen-sh/py-machineid)
+for the machine's fingerprint during activation. Upon activation, a
+heartbeat monitor will be started for the activated machine.
 
 If you **exit** the process, the machine will be deactivated.
 
