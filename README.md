@@ -24,13 +24,13 @@ file and then run `source ~/.bashrc` after saving the file.
 Next, install dependencies with [`pip`](https://packaging.python.org/):
 
 ```
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 To perform a machine activation, run the program with a license key:
 
 ```
-python main.py some-license-key-here
+python3 main.py some-license-key-here
 ```
 
 The script will use a SHA256 hash of your device's MAC address for the

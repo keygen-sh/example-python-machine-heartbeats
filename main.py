@@ -1,9 +1,8 @@
-from uuid import getnode as get_mac
+import machineid
 import threading
 import signal
 import requests
 import json
-import hashlib
 import sys
 import os
 
@@ -170,7 +169,7 @@ def maintain_hearbeat_for_machine(machine_id):
   timer.start()
 
 # Fingerprint the current device and get the license key
-machine_fingerprint = hashlib.sha256(str(get_mac()).encode('utf-8')).hexdigest()
+machine_fingerprint = machineid.hashed_id('example-app')
 license_key = sys.argv[1]
 
 # Validate the license key scoped to the current machine fingerprint
